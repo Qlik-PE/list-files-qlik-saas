@@ -10,9 +10,7 @@ if TOKEN is None or len(TOKEN) == 0:
 
 print(f"Let´s see which data files I have access on {TENANT}")
 
-authheader = {
-    'Authorization': f"Bearer {TOKEN}"
-}
+authheader = { 'Authorization': f"Bearer {TOKEN}" }
 url_items = f'https://{TENANT}/api/v1/items?resourceType=dataset&limit=100'
 while len(url_items):
     response = req.get(url_items, headers=authheader)
