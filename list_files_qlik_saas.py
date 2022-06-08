@@ -4,8 +4,7 @@ import os
 TENANT = 'anjos.us.qlikcloud.com'
 TOKEN = os.getenv('KEY')
 if TOKEN is None or len(TOKEN) == 0:
-    print(
-        f"Ops, you are missing a key to access {TENANT}, please take a look at https://qlik.dev/tutorials/generate-your-first-api-key")
+    print(f"Ops, you are missing a key to access {TENANT}, please take a look at https://qlik.dev/tutorials/generate-your-first-api-key")
     exit
 
 print(f"Let´s see which data files I have access on {TENANT}")
